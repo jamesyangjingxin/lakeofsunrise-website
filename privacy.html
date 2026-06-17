@@ -269,6 +269,15 @@
       text-decoration: underline;
     }
 
+    .policy-section code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85em;
+      background: var(--grey-soft);
+      padding: 0.1em 0.4em;
+      border-radius: 3px;
+      color: var(--teal-dark);
+    }
+
     /* ── TOC ── */
     .toc {
       background: white;
@@ -357,28 +366,13 @@
   <!-- HEADER -->
   <header class="page-header">
     <h1>Privacy Policy</h1>
-    <p>Last updated: June 2025</p>
+    <p>Last updated: June 2026</p>
   </header>
 
   <div class="sunrise-band"></div>
 
   <!-- CONTENT -->
   <main class="policy-wrap">
-
-    <!-- TOC -->
-    <nav class="toc" aria-label="Table of contents">
-      <p>Contents</p>
-      <ol>
-        <li><a href="#overview">Overview</a></li>
-        <li class="highlight"><a href="#gmail-api">Gmail API and Google User Data</a></li>
-        <li><a href="#data-we-collect">Data We Collect</a></li>
-        <li><a href="#how-we-use">How We Use Your Data</a></li>
-        <li><a href="#data-sharing">Data Sharing</a></li>
-        <li><a href="#data-security">Data Security</a></li>
-        <li><a href="#your-rights">Your Rights and Controls</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-      </ol>
-    </nav>
 
     <!-- OVERVIEW -->
     <section class="policy-section" id="overview">
@@ -387,42 +381,33 @@
       <p>We are committed to privacy as a matter of principle. We do not build advertising profiles, sell data, or collect more than is strictly necessary to provide the services our members rely on.</p>
     </section>
 
-    <!-- ★ GMAIL API — PROMINENT, DETAILED ★ -->
-    <section class="gmail-section" id="gmail-api">
-      <span class="section-label">Google API · Featured Section</span>
+    <!-- GMAIL API -->
+    <section class="policy-section" id="gmail-api">
       <h2>2. Gmail API and Google User Data</h2>
       <p>Lake of Sunrise and its <strong>Gmail Sender</strong> tool access Google user data solely to provide bulk email sending functionality on behalf of our members. The following describes exactly how we handle Google user data:</p>
 
-      <div class="data-block">
-        <h3>What we access</h3>
-        <ul>
-          <li>Your Gmail account's ability to send emails (<code>gmail.send</code>) — used only to send emails you compose and initiate through our tool</li>
-          <li>Your Google account email address (<code>userinfo.email</code>) — used to identify your account and associate your sending jobs with your login</li>
-          <li>Your Google account display name (<code>userinfo.profile</code>) — used solely to display your name in the "From" field of emails you send</li>
-        </ul>
-      </div>
+      <p><strong>What we access:</strong></p>
+      <ul>
+        <li>Your Gmail account's ability to send emails (<code>gmail.send</code>) — used only to send emails you compose and initiate through our tool</li>
+        <li>Your Google account email address (<code>userinfo.email</code>) — used to identify your account and associate your sending jobs with your login</li>
+        <li>Your Google account display name (<code>userinfo.profile</code>) — used solely to display your name in the "From" field of emails you send</li>
+      </ul>
 
-      <div class="data-block no-list">
-        <h3>What we do NOT do</h3>
-        <ul>
-          <li>We never read, scan, or access any existing emails in your Gmail inbox or any other folder</li>
-          <li>We never store the content of emails you send beyond the duration of your active sending job</li>
-          <li>We never share, sell, transfer, or disclose your Google user data to any third party</li>
-          <li>We never use your Google data for advertising or any purpose unrelated to the sending function you explicitly initiate</li>
-        </ul>
-      </div>
+      <p><strong>What we do NOT do:</strong></p>
+      <ul>
+        <li>We never read, scan, or access any existing emails in your Gmail inbox or any other folder</li>
+        <li>We never store the content of emails you send beyond the duration of your active sending job</li>
+        <li>We never share, sell, transfer, or disclose your Google user data to any third party</li>
+        <li>We never use your Google data for advertising or any purpose unrelated to the sending function you explicitly initiate</li>
+      </ul>
 
-      <div class="data-block">
-        <h3>How we store your data</h3>
-        <ul>
-          <li>Your OAuth refresh token is stored securely in an encrypted database solely to allow sending to continue in the background after you close your browser</li>
-          <li>You can revoke our access at any time by visiting <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a> and removing Lake of Sunrise / Gmail Sender</li>
-        </ul>
-      </div>
+      <p><strong>How we store your data:</strong></p>
+      <ul>
+        <li>Your OAuth refresh token is stored securely in an encrypted database solely to allow sending to continue in the background after you close your browser</li>
+        <li>You can revoke our access at any time by visiting <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a> and removing Lake of Sunrise / Gmail Sender</li>
+      </ul>
 
-      <div class="compliance-note">
-        <strong>Compliance:</strong> Our use of Google user data complies fully with the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.
-      </div>
+      <p><strong>Compliance:</strong> Our use of Google user data complies fully with the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
     </section>
 
     <!-- DATA WE COLLECT -->
@@ -500,7 +485,7 @@
   <!-- FOOTER -->
   <footer>
     <p>
-      © 2026 Lake of Sunrise. All rights reserved.
+      © 2025 Lake of Sunrise. All rights reserved.
       <span class="footer-sep">|</span>
       <a href="index.html">Home</a>
       <span class="footer-sep">|</span>
