@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <title>Terms of Service — Lake of Sunrise</title>
+  <meta name="description" content="Terms of Service for Lake of Sunrise and the Gmail Sender tool." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal:       #1B6B8A;
+      --teal-dark:  #134f67;
+      --teal-light: #2a8aad;
+      --gold:       #C9A84C;
+      --gold-light: #e2c47a;
+      --offwhite:   #F7F5F0;
+      --grey-soft:  #E8E4DE;
+      --slate:      #2C3E50;
+      --slate-mid:  #4a5c6e;
+      --text:       #1e2a33;
+      --text-muted: #5a6872;
+    }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--offwhite);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(27, 107, 138, 0.97);
+      backdrop-filter: blur(8px);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      box-shadow: 0 1px 12px rgba(0,0,0,0.18);
+    }
+
+    nav .nav-logo {
+      height: 36px;
+      width: auto;
+      opacity: 0.92;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul a {
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav ul a:hover { color: var(--gold-light); }
+
+    /* ── PAGE HEADER ── */
+    .page-header {
+      background: linear-gradient(160deg, #0d3d52 0%, #1B6B8A 100%);
+      color: white;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-header p {
+      opacity: 0.78;
+      font-size: 0.95rem;
+      font-weight: 300;
+    }
+
+    .sunrise-band {
+      height: 6px;
+      background: linear-gradient(90deg,
+        var(--teal-dark) 0%,
+        var(--gold) 30%,
+        #e8b86d 50%,
+        var(--gold) 70%,
+        var(--teal-dark) 100%
+      );
+    }
+
+    /* ── LAYOUT ── */
+    .policy-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem;
+    }
+
+    /* ── SECTIONS ── */
+    .policy-section {
+      margin-bottom: 3rem;
+    }
+
+    .policy-section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--slate);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--grey-soft);
+    }
+
+    .policy-section p {
+      font-size: 0.98rem;
+      color: var(--text-muted);
+      margin-bottom: 0.9rem;
+      line-height: 1.8;
+    }
+
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 0.9rem;
+    }
+
+    .policy-section ul li {
+      padding: 0.35rem 0 0.35rem 1.4rem;
+      position: relative;
+      font-size: 0.97rem;
+      color: var(--text-muted);
+    }
+
+    .policy-section ul li::before {
+      content: '–';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+    }
+
+    .policy-section a {
+      color: var(--teal);
+      text-decoration: underline;
+    }
+
+    .policy-section code {
+      font-family: 'Courier New', monospace;
+      font-size: 0.85em;
+      background: var(--grey-soft);
+      padding: 0.1em 0.4em;
+      border-radius: 3px;
+      color: var(--teal-dark);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--slate);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--gold-light); }
+    footer .footer-sep { margin: 0 0.25rem; opacity: 0.4; }
+
+    @media (max-width: 600px) {
+      .policy-wrap { padding: 2.5rem 1.25rem 3rem; }
+      nav ul { gap: 1rem; }
+      nav ul a { font-size: 0.8rem; }
+    }
+
+    @media (max-width: 400px) {
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html"><img src="logo.png" alt="Lake of Sunrise" class="nav-logo" /></a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <h1>Terms of Service</h1>
+    <p>Last updated: June 2026</p>
+  </header>
+
+  <div class="sunrise-band"></div>
+
+  <!-- CONTENT -->
+  <main class="policy-wrap">
+
+    <section class="policy-section" id="acceptance">
+      <h2>1. Acceptance of Terms</h2>
+      <p>By accessing the Lake of Sunrise website (<strong>lakeofsunrise.org</strong>) or using the <strong>Gmail Sender</strong> tool provided to member organizations, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our website or tools.</p>
+      <p>These Terms apply to all visitors to the website and all members who access the Gmail Sender tool. Lake of Sunrise reserves the right to update these Terms at any time. Continued use of our website or tools following any update constitutes acceptance of the revised Terms.</p>
+    </section>
+
+    <section class="policy-section" id="about">
+      <h2>2. About Lake of Sunrise</h2>
+      <p>Lake of Sunrise is a non-governmental organization promoting artistic freedom across cultural communities. We operate the website at <strong>lakeofsunrise.org</strong> and provide the <strong>Gmail Sender</strong> tool to member organizations — a bulk email sending tool that allows members to communicate directly with their audiences, patrons, and decision-makers through their own Gmail accounts.</p>
+    </section>
+
+    <section class="policy-section" id="gmail-sender">
+      <h2>3. Gmail Sender Tool — Permitted Use</h2>
+      <p>The Gmail Sender tool is provided exclusively to member organizations of Lake of Sunrise for the purpose of sending legitimate, permission-based communications to their audiences. By using the Gmail Sender tool, you agree to the following:</p>
+      <ul>
+        <li>You will only send emails to recipients who have a legitimate relationship with your organization or who have consented to receive communications from you</li>
+        <li>You will not use the tool to send unsolicited bulk email (spam), phishing messages, or any content that is deceptive, fraudulent, or harmful</li>
+        <li>You will not use the tool to send emails that violate any applicable laws, including but not limited to Canada's Anti-Spam Legislation (CASL), the CAN-SPAM Act, or GDPR where applicable</li>
+        <li>You will not use the tool to send content that harasses, threatens, or discriminates against any individual or group</li>
+        <li>You are solely responsible for the content of emails you send through the tool and for maintaining appropriate consent records for your recipients</li>
+        <li>You will not attempt to circumvent Gmail's sending limits or use the tool in a manner that violates Google's Terms of Service</li>
+      </ul>
+      <p>Lake of Sunrise reserves the right to suspend or terminate access to the Gmail Sender tool for any member who violates these terms, without prior notice.</p>
+    </section>
+
+    <section class="policy-section" id="google-oauth">
+      <h2>4. Google Account Authorization</h2>
+      <p>The Gmail Sender tool requires you to authorize access to your Google account via OAuth 2.0. By granting this authorization, you acknowledge that:</p>
+      <ul>
+        <li>You are authorizing Lake of Sunrise to send emails on your behalf using your Gmail account, solely as directed by you through the tool</li>
+        <li>Lake of Sunrise will only access the Google account permissions you explicitly grant (<code>gmail.send</code>, <code>userinfo.email</code>, <code>userinfo.profile</code>)</li>
+        <li>You may revoke this authorization at any time via <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a></li>
+        <li>Your use of Google's services through this tool is also subject to <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer">Google's Terms of Service</a></li>
+      </ul>
+    </section>
+
+    <section class="policy-section" id="member-accounts">
+      <h2>5. Member Accounts and Access</h2>
+      <p>Access to the Gmail Sender tool is granted to verified members of Lake of Sunrise. As a member user, you are responsible for:</p>
+      <ul>
+        <li>Keeping your Google account credentials secure and not sharing access with unauthorized individuals</li>
+        <li>All sending activity conducted through your account, whether initiated by you or by someone with access to your account</li>
+        <li>Notifying Lake of Sunrise promptly at <a href="mailto:info@lakeofsunrise.org">info@lakeofsunrise.org</a> if you suspect unauthorized use of your account</li>
+      </ul>
+    </section>
+
+    <section class="policy-section" id="intellectual-property">
+      <h2>6. Intellectual Property</h2>
+      <p>All content on the Lake of Sunrise website — including text, design, graphics, and the Lake of Sunrise name and logo — is the property of Lake of Sunrise and may not be reproduced, distributed, or used without prior written permission.</p>
+      <p>Member organizations retain full ownership of the content they create and send through the Gmail Sender tool. Lake of Sunrise claims no rights over email content created by members.</p>
+    </section>
+
+    <section class="policy-section" id="disclaimer">
+      <h2>7. Disclaimer of Warranties</h2>
+      <p>The Lake of Sunrise website and Gmail Sender tool are provided "as is" without warranties of any kind, express or implied. We do not guarantee that:</p>
+      <ul>
+        <li>The tool will be available at all times or free from interruptions</li>
+        <li>Emails sent through the tool will be delivered successfully (delivery depends on Gmail's infrastructure and recipient mail servers)</li>
+        <li>The tool will be free from errors or bugs at all times</li>
+      </ul>
+      <p>Lake of Sunrise is not liable for any loss or damage arising from your use of the website or the Gmail Sender tool, including but not limited to lost emails, sending failures, or account suspension by Google.</p>
+    </section>
+
+    <section class="policy-section" id="limitation">
+      <h2>8. Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law, Lake of Sunrise shall not be liable for any indirect, incidental, special, or consequential damages arising out of or related to your use of the website or Gmail Sender tool. Our total liability to any member for any claim shall not exceed the amount paid by that member to Lake of Sunrise in the twelve months preceding the claim, or CAD $100, whichever is greater.</p>
+    </section>
+
+    <section class="policy-section" id="termination">
+      <h2>9. Termination of Access</h2>
+      <p>Lake of Sunrise may terminate or suspend your access to the Gmail Sender tool at any time, with or without cause, including but not limited to violation of these Terms, abuse of the tool, or misuse of Google's services. Upon termination, your authorization to use the tool ends immediately. You may also terminate your use at any time by revoking our OAuth access via <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener noreferrer">myaccount.google.com/permissions</a>.</p>
+    </section>
+
+    <section class="policy-section" id="governing-law">
+      <h2>10. Governing Law</h2>
+      <p>These Terms of Service are governed by the laws of the Province of Ontario, Canada, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts of Ontario, Canada.</p>
+    </section>
+
+    <section class="policy-section" id="contact">
+      <h2>11. Contact Us</h2>
+      <p>If you have questions about these Terms of Service, please contact:</p>
+      <p>
+        <strong>Lake of Sunrise</strong><br />
+        <a href="mailto:info@lakeofsunrise.org">info@lakeofsunrise.org</a><br />
+        <a href="https://lakeofsunrise.org">lakeofsunrise.org</a>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 Lake of Sunrise. All rights reserved.
+      <span class="footer-sep">|</span>
+      <a href="index.html">Home</a>
+      <span class="footer-sep">|</span>
+      <a href="privacy.html">Privacy Policy</a>
+      <span class="footer-sep">|</span>
+      <a href="mailto:info@lakeofsunrise.org">Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>
