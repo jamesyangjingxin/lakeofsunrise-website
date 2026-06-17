@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lake of Sunrise — A Coalition for Artistic Freedom</title>
+  <meta name="description" content="Lake of Sunrise is a coalition promoting artistic freedom across cultures — supporting Asian, Indigenous, Western classical, Modern Jazz, and other performing arts organizations." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal:       #1B6B8A;
+      --teal-dark:  #134f67;
+      --teal-light: #2a8aad;
+      --gold:       #C9A84C;
+      --gold-light: #e2c47a;
+      --offwhite:   #F7F5F0;
+      --grey-soft:  #E8E4DE;
+      --slate:      #2C3E50;
+      --slate-mid:  #4a5c6e;
+      --text:       #1e2a33;
+      --text-muted: #5a6872;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--offwhite);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(27, 107, 138, 0.97);
+      backdrop-filter: blur(8px);
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      box-shadow: 0 1px 12px rgba(0,0,0,0.18);
+    }
+
+    nav .nav-logo {
+      height: 36px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.92;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul a {
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    nav ul a:hover { color: var(--gold-light); }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(160deg, #0d3d52 0%, #1B6B8A 55%, #2a8aad 100%);
+      color: white;
+      padding: 7rem 2rem 5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: 
+        radial-gradient(ellipse 80% 60% at 50% 110%, rgba(201,168,76,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 20% 20%, rgba(255,255,255,0.04) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-logo {
+      height: 56px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      opacity: 0.95;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 600;
+      line-height: 1.22;
+      max-width: 760px;
+      margin: 0 auto 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero p.lead {
+      font-size: clamp(1rem, 2.2vw, 1.2rem);
+      font-weight: 300;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.88;
+      line-height: 1.8;
+    }
+
+    /* ── SUNRISE BAND ── */
+    .sunrise-band {
+      height: 6px;
+      background: linear-gradient(90deg, 
+        var(--teal-dark) 0%, 
+        var(--gold) 30%, 
+        #e8b86d 50%, 
+        var(--gold) 70%, 
+        var(--teal-dark) 100%
+      );
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .container {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .section-eyebrow {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 600;
+      color: var(--slate);
+      line-height: 1.25;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-body {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      max-width: 640px;
+      line-height: 1.8;
+    }
+
+    /* ── WHO WE ARE ── */
+    .who {
+      background: var(--offwhite);
+      border-bottom: 1px solid var(--grey-soft);
+    }
+
+    .who-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .who-quote {
+      border-left: 3px solid var(--gold);
+      padding-left: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-style: italic;
+      color: var(--slate);
+      line-height: 1.6;
+    }
+
+    /* ── THREE PILLARS ── */
+    .pillars {
+      background: white;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      margin-top: 3rem;
+    }
+
+    .pillar {
+      padding: 2rem 1.75rem;
+      border-top: 3px solid var(--grey-soft);
+      transition: border-color 0.3s;
+    }
+
+    .pillar:hover {
+      border-color: var(--teal);
+    }
+
+    .pillar-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .pillar h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--slate);
+      margin-bottom: 0.75rem;
+    }
+
+    .pillar p {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ── PRIVACY COMMITMENT ── */
+    .privacy {
+      background: var(--teal-dark);
+      color: white;
+    }
+
+    .privacy .section-eyebrow {
+      color: var(--gold-light);
+    }
+
+    .privacy .section-title {
+      color: white;
+    }
+
+    .privacy .section-body {
+      color: rgba(255,255,255,0.82);
+    }
+
+    .privacy-box {
+      margin-top: 2.5rem;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 4px;
+      padding: 2rem 2.25rem;
+      max-width: 680px;
+    }
+
+    .privacy-box p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.9);
+      line-height: 1.85;
+      font-style: italic;
+    }
+
+    .privacy-box .privacy-link {
+      display: inline-block;
+      margin-top: 1.25rem;
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-bottom: 1px solid rgba(201,168,76,0.4);
+      padding-bottom: 1px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .privacy-box .privacy-link:hover {
+      color: white;
+      border-color: white;
+    }
+
+    /* ── CONTACT ── */
+    .contact {
+      background: var(--grey-soft);
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .contact .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .contact p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact a.email-link {
+      display: inline-block;
+      color: var(--teal);
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid var(--teal-light);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .contact a.email-link:hover {
+      color: var(--teal-dark);
+      border-color: var(--gold);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--slate);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      margin: 0 0.5rem;
+      transition: color 0.2s;
+    }
+
+    footer a:hover { color: var(--gold-light); }
+
+    footer .footer-sep { margin: 0 0.25rem; opacity: 0.4; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav ul { gap: 1.25rem; }
+      nav ul a { font-size: 0.82rem; }
+
+      .who-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav ul { display: none; }
+      .hero { padding: 5rem 1.5rem 4rem; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <img src="logo.png" alt="Lake of Sunrise" class="nav-logo" />
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#what-we-do">What We Do</a></li>
+      <li><a href="#privacy">Privacy</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="logo.png" alt="Lake of Sunrise" class="hero-logo" />
+    <h1>A Coalition for <em>Artistic Freedom</em><br>Across Cultures</h1>
+    <p class="lead">We bring together performing arts organizations — Asian, Indigenous, Western classical, Modern Jazz, and beyond — to protect, amplify, and advance artistic expression in all its forms.</p>
+  </header>
+
+  <div class="sunrise-band"></div>
+
+  <!-- WHO WE ARE -->
+  <section class="who" id="about">
+    <div class="container">
+      <div class="who-inner">
+        <div>
+          <p class="section-eyebrow">Who We Are</p>
+          <h2 class="section-title">An Independent Voice for the Arts</h2>
+          <p class="section-body">Lake of Sunrise is a non-governmental organization uniting performing arts groups across cultural traditions. We exist because artistic communities deserve a shared platform — one that speaks across institutional boundaries and geographic borders.</p>
+          <br />
+          <p class="section-body">Our members include organizations rooted in Asian performing arts traditions, Indigenous cultural practices, Western classical music and theater, Modern Jazz, and contemporary interdisciplinary work. What unites us is a belief that artistic freedom is not a privilege — it is a right.</p>
+        </div>
+        <div>
+          <blockquote class="who-quote">
+            "Art does not belong to a single tradition. Freedom in artistic expression is a universal value, and advocating for it requires a coalition that reflects that universality."
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="pillars" id="what-we-do">
+    <div class="container">
+      <p class="section-eyebrow">What We Do</p>
+      <h2 class="section-title">Advocacy Through Community and Communication</h2>
+      <p class="section-body">We empower member organizations to reach audiences and decision-makers directly — providing tools, platforms, and collective support to ensure their voices are heard.</p>
+
+      <div class="pillars-grid">
+        <div class="pillar">
+          <span class="pillar-icon">🤝</span>
+          <h3>Coalition Building</h3>
+          <p>We connect arts organizations across cultural traditions, creating a network where shared challenges become collective opportunities and where diverse voices strengthen one another.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">📢</span>
+          <h3>Direct Outreach</h3>
+          <p>We provide members with tools to communicate directly with their audiences, patrons, and policymakers — without intermediaries filtering or limiting their message.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-icon">🛡️</span>
+          <h3>Principled Advocacy</h3>
+          <p>We advocate for policies and environments that protect artistic freedom — at institutional, governmental, and community levels — grounded in respect for cultural diversity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY COMMITMENT -->
+  <section class="privacy" id="privacy">
+    <div class="container">
+      <p class="section-eyebrow">Our Commitment</p>
+      <h2 class="section-title">Privacy by Principle</h2>
+      <p class="section-body">We believe that the tools we provide to members should be trustworthy, transparent, and respectful of everyone they touch — including artists, audiences, and email recipients.</p>
+
+      <div class="privacy-box">
+        <p>Lake of Sunrise does not collect, store, or sell any personal data of artists, audiences, or email recipients. All tools provided to members operate solely through members' own accounts.</p>
+        <a href="privacy.html" class="privacy-link">Read our full Privacy Policy →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+      <p>Questions about membership, our work, or our tools? We welcome inquiries from arts organizations and individuals who share our values.</p>
+      <a href="mailto:info@lakeofsunrise.org" class="email-link">info@lakeofsunrise.org</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2025 Lake of Sunrise. All rights reserved.
+      <span class="footer-sep">|</span>
+      <a href="privacy.html">Privacy Policy</a>
+      <span class="footer-sep">|</span>
+      <a href="mailto:info@lakeofsunrise.org">Contact</a>
+    </p>
+  </footer>
+
+</body>
+</html>
