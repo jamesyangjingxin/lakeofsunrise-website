@@ -74,6 +74,20 @@
 
     nav ul a:hover { color: var(--gold-light); }
 
+    nav ul a.nav-cta {
+      background: var(--gold);
+      color: var(--teal-dark);
+      padding: 0.35rem 0.9rem;
+      border-radius: 3px;
+      font-weight: 600;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    nav ul a.nav-cta:hover {
+      background: var(--gold-light);
+      color: var(--teal-dark);
+    }
+
     /* ── HERO ── */
     .hero {
       background: linear-gradient(160deg, #0d3d52 0%, #1B6B8A 55%, #2a8aad 100%);
@@ -120,9 +134,27 @@
       font-size: clamp(1rem, 2.2vw, 1.2rem);
       font-weight: 300;
       max-width: 600px;
-      margin: 0 auto;
+      margin: 0 auto 2rem;
       opacity: 0.88;
       line-height: 1.8;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--teal-dark);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.75rem 2rem;
+      border-radius: 3px;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .hero-cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
     }
 
     /* ── SUNRISE BAND ── */
@@ -380,6 +412,7 @@
       <li><a href="#what-we-do">What We Do</a></li>
       <li><a href="#privacy">Privacy</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="https://gs.lakeofsunrise.org" target="_blank" rel="noopener noreferrer" class="nav-cta">Email Tool</a></li>
     </ul>
   </nav>
 
@@ -388,6 +421,7 @@
     <img src="logo.png" alt="Lake of Sunrise" class="hero-logo" />
     <h1>A Coalition for <em>Artistic Freedom</em><br>Across Cultures</h1>
     <p class="lead">We bring together performing arts organizations — Asian, Indigenous, Western classical, Modern Jazz, and beyond — to protect, amplify, and advance artistic expression in all its forms.</p>
+    <a href="https://gs.lakeofsunrise.org" target="_blank" rel="noopener noreferrer" class="hero-cta">Email Tool for Members →</a>
   </header>
 
   <div class="sunrise-band"></div>
@@ -467,7 +501,7 @@
     <p>
       © 2026 Lake of Sunrise. All rights reserved.
       <span class="footer-sep">|</span>
-      <a href="https://gs.lakeofsunrise.org" target="_blank" rel="noopener noreferrer">Gmail Sender — Member Tool</a>
+      <a href="https://gs.lakeofsunrise.org" target="_blank" rel="noopener noreferrer">Email Tool</a>
       <span class="footer-sep">|</span>
       <a href="privacy.html">Privacy Policy</a>
       <span class="footer-sep">|</span>
